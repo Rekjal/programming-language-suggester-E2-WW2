@@ -1,0 +1,109 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(128, 129, 129);
+}
+
+.container {
+  width: 65%;
+}
+
+.containerExtra {
+  background-color: rgb(223, 224, 224);
+  padding: 2px 10px 5px 10px;
+}
+
+#emailFormat {
+ float: right;
+}
+
+#status {
+  color: green;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.gridRow1 {
+  margin: auto;
+  width: 100%;
+  padding: 20px 0px 20px 0px;
+  background-color: rgb(207, 207, 207);
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.gridRow2 {
+  margin: auto;
+  width: 100%;
+  padding: 20px 0px 20px 0px;
+  background-color: rgb(207, 207, 207);
+  margin-bottom: 30px;
+}
+
+.gridRow3 {
+  margin: auto;
+  width: 100%;
+  padding: 0px 0px 0px 0px;
+  background-color: rgb(207, 207, 207);
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 24px;
+  text-align: center;
+}
+
+h1{
+  text-transform: uppercase;
+  margin: 30px 0px 30px 0px;
+}
+
+#txt_formatting {
+  padding-left: 20px;
+  padding-right: 20px;
+  /* text-align: justify; */
+}
+
+#imgformat_profile_pic img {
+  margin: auto;
+  width: 100%;
+  border-radius: 200px;
+  float: right;
+  height: auto;
+}
+
+#paraFormat{
+  padding-left:20px;
+  font-weight: 700;
+}
+.center{
+  margin: auto;
+  width: 100%;
+}
+
+.sectionMargin {
+  margin-bottom: 40px;
+}
+
+.smallFont {
+  display:block;
+  font-size: 10px;
+}
+
+#para_format {
+  margin-bottom: 0px;
+}
+
+#footer1 {
+  background-color: rgb(138, 138, 138);
+  font-size: 24px;
+  text-align: center;
+}
+
+.noMarPad{
+  padding:0px;
+  margin: 0px;
+}
+
+.diffColor {
+  background-color: rgb(177, 175, 175);
+  font-size: 24px;
+  text-align: center;
+}
