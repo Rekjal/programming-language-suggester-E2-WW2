@@ -15,6 +15,16 @@ body {
 h1, h2 {
   text-align: center;
 }
+
+.block {
+  margin: 40px;
+}
+
+.center {
+  width: 100px;
+  margin:auto;
+}
+
 /* #emailFormat {
  float: right;
 }
