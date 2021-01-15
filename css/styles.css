@@ -12,7 +12,10 @@ body {
   padding: 2px 10px 5px 10px;
 }
 
-#emailFormat {
+h1, h2 {
+  text-align: center;
+}
+/* #emailFormat {
  float: right;
 }
 
@@ -58,7 +61,6 @@ h1{
 #txt_formatting {
   padding-left: 20px;
   padding-right: 20px;
-  /* text-align: justify; */
 }
 
 #imgformat_profile_pic img {
@@ -106,4 +108,4 @@ h1{
   background-color: rgb(177, 175, 175);
   font-size: 24px;
   text-align: center;
-}
+} */
