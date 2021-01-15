@@ -17,10 +17,83 @@
     <h2>INTRO</h2>
     <p>"Epicodus offers so many different courses and hence as a prospective student you may be at a loss to decide on
       which programming track to pursue" </p>
-    <p>"But fear not - help is here- answer below questions and you will get an expert recommendation on what is best for
+    <p>"But fear not - help is here- answer below questions and you will get an expert recommendation on what is best
+      for
       you?"</p>
     <p>To help guide your choice here is a quick questionnaire.</p>
-    
+
+    <form id=questionForm>
+      <div class="form-group">
+        <p><strong>Which area are you interested in mastering?</strong></p>
+        <div class="radio">
+          <label>
+            <input type="radio" name="flavor" value="chocolate" checked>
+            Front-End
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="flavor" value="vanilla">
+            Back-End
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="flavor" value="vanilla">
+            Full Stack
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <p><strong>How many hours/day would you be able to learning a Programming language?</strong></p>
+        <!-- <label for="hours"></label> -->
+        <input id="hours" class="form-control" type="number" min=0>
+      </div>
+
+      <div class="form-group">
+        <div class="radio">
+          <p><strong>How many years of Programming experience do you have?</strong></p>
+          <label>
+            <input type="radio" name="flavor" value="chocolate" checked>
+            0-5 Years
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="flavor" value="vanilla">
+            6-10 Years
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="flavor" value="vanilla">
+            More than 10 Years
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="radio">
+          <p><strong>Manipulating large chuncks of user data?</strong></p>
+          <label><input type="radio" name="flavor" value="1">&nbsp;1&nbsp;</label>
+          <label><input type="radio" name="flavor" value="2">&nbsp;2&nbsp;</label>
+          <label><input type="radio" name="flavor" value="3">&nbsp;3&nbsp;</label>
+          <label><input type="radio" name="flavor" value="4">&nbsp;4&nbsp;</label>
+          <label><input type="radio" name="flavor" value="5">&nbsp;5&nbsp;</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <p><strong>Which of these four personality types do you think best describes your self?</strong></p>
+        <select class="form-control" id="type">
+          <option>Introverted & Passive</option>
+          <option>Extroverted & Passive</option>
+          <option>Introverted & Agressive</option>
+          <option>Extroverted & Agressive</option>
+        </select>
+      </div>
+    </form>
   </div>
 </body>
 
