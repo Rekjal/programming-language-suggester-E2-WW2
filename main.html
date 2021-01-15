@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="css/bootstrap.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
-  <script src="js/scripts.js"></script>
   <script src="js/jquery-3.5.1.js"></script>
+  <script src="js/scripts.js"></script>
   <title>Programming Suggester</title>
 </head>
 
@@ -22,19 +22,19 @@
           <p><strong>Which area are you interested in mastering?</strong></p>
           <div class="radio">
             <label>
-              <input type="radio" name="flavor" value="chocolate" checked>
+              <input type="radio" name="area" value="FE" checked>
               Front-End
             </label>
           </div>
           <div class="radio">
             <label>
-              <input type="radio" name="flavor" value="vanilla">
+              <input type="radio" name="area" value="BE">
               Back-End
             </label>
           </div>
           <div class="radio">
             <label>
-              <input type="radio" name="flavor" value="vanilla">
+              <input type="radio" name="area" value="FS">
               Full Stack
             </label>
           </div>
@@ -42,21 +42,21 @@
 
         <div class="block">
           <p><strong>How many hours/day would you be able to learning a Programming language?</strong></p>
-          <input id="hours" class="form-control" type="number" min=0>
+          <input id="hours" class="form-control" type="number" min=0 required>
         </div>
 
         <div class="block">
           <div class="radio">
             <p><strong>How many years of Programming experience do you have?</strong></p>
-            <input type="radio" name="flavor" value="chocolate" checked>
-            0-5 Years
+            <input type="radio" name="experience" value="zeroOne" checked>
+            0-1 Years
             <div class="radio">
-              <input type="radio" name="flavor" value="vanilla">
-              6-10 Years
+              <input type="radio" name="experience" value="twoFive">
+              2-5 Years
             </div>
             <div class="radio">
-              <input type="radio" name="flavor" value="vanilla">
-              More than 10 Years
+              <input type="radio" name="experience" value="moreThanFive">
+              More than 5 Years
             </div>
           </div>
         </div>
@@ -64,17 +64,17 @@
         <div class="block">
           <div class="radio">
             <p><strong>Manipulating large chuncks of user data?</strong></p>
-            <label><input type="radio" name="flavor" value="1">&nbsp;1&nbsp;</label>
-            <label><input type="radio" name="flavor" value="2">&nbsp;2&nbsp;</label>
-            <label><input type="radio" name="flavor" value="3">&nbsp;3&nbsp;</label>
-            <label><input type="radio" name="flavor" value="4">&nbsp;4&nbsp;</label>
-            <label><input type="radio" name="flavor" value="5">&nbsp;5&nbsp;</label>
+            <label><input type="radio" name="dataInterest" value="1" required>&nbsp;1&nbsp;</label>
+            <label><input type="radio" name="dataInterest" value="2" required>&nbsp;2&nbsp;</label>
+            <label><input type="radio" name="dataInterest" value="3" required>&nbsp;3&nbsp;</label>
+            <label><input type="radio" name="dataInterest" value="4" required>&nbsp;4&nbsp;</label>
+            <label><input type="radio" name="dataInterest" value="5" required>&nbsp;5&nbsp;</label>
           </div>
         </div>
 
         <div class="block">
           <p><strong>Which of these four personality types do you think best describes your self?</strong></p>
-          <select class="form-control" id="type">
+          <select class="form-control" id="type" required>
             <option>Introverted & Passive</option>
             <option>Extroverted & Passive</option>
             <option>Introverted & Agressive</option>
@@ -82,9 +82,17 @@
           </select>
         </div>
       </div>
-      <button class="btn" type="submit" >Show me the story!</button>
+      <button class="btn btn-success" type="submit" >Press for Result!</button>
     </form>
+<div class="result">
+    <p>You selected <span class="person1"></span> and <span class="person2"></span> were walking through the woods</p>
   </div>
+
+  <div style="margin-top: 100px">
+    <a href="./index.html">Go Back to Home page</a>
+  </div>
+
+</div>
 </body>
 
 </html>

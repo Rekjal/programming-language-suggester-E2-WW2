@@ -25,6 +25,14 @@ h1, h2 {
   margin:auto;
 }
 
+.hidden {
+  display:none;
+}
+
+.result{
+  display: none;
+}
+
 /* #emailFormat {
  float: right;
 }
