@@ -17,79 +17,85 @@
     <h2>Please answer following:</h2>
     <form id=questionForm>
 
-      <div class="form-group">
-        <div class="block">
-          <p><strong>Area of Interest: </strong></p>
-          <div class="radio">
-            <label>
-              <input type="radio" name="area" value="Front-End" checked>
-              Front-End
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="area" value="Back-End">
-              Back-End
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="area" value="Full-End">
-              Full Stack
-            </label>
-          </div>
+      <div class="block">
+        <p><strong>Area of Interest: </strong></p>
+        <div class="radio">
+          <input type="radio" name="area" value="Front-End" checked>
+          Front-End
         </div>
-
-        <div class="block">
-          <p><strong>Hours/day you are willing to spend on Programming: </strong></p>
-          <input id="hours" class="form-control wide250" type="number" min=0 required size="40">
+        <div class="radio">
+          <input type="radio" name="area" value="Back-End">
+          Back-End
         </div>
-
-        <div class="block">
-          <div class="radio">
-            <p><strong>Years of Programming Experience: </strong></p>
-            <input type="radio" name="experience" value="zeroOne" checked>
-            0-1 Years
-            <div class="radio">
-              <input type="radio" name="experience" value="twoFive">
-              2-5 Years
-            </div>
-            <div class="radio">
-              <input type="radio" name="experience" value="moreThanFive">
-              More than 5 Years
-            </div>
-          </div>
-        </div>
-
-        <div class="block">
-          <div class="radio">
-            <p><strong>Level of interest in Manipulating large chunks of data:</strong> (<strong>1</strong> represents
-              least interest while <strong>5</strong> represents most interest)</p>
-            <label><input type="radio" name="dataInterest" value="1" required>&nbsp;1&nbsp;</label>
-            <label><input type="radio" name="dataInterest" value="2" required>&nbsp;2&nbsp;</label>
-            <label><input type="radio" name="dataInterest" value="3" required>&nbsp;3&nbsp;</label>
-            <label><input type="radio" name="dataInterest" value="4" required>&nbsp;4&nbsp;</label>
-            <label><input type="radio" name="dataInterest" value="5" required>&nbsp;5&nbsp;</label>
-          </div>
-        </div>
-
-        <div class="block">
-          <p><strong>Personality Type: </strong></p>
-          <select class="form-control wide250" id="type" required>
-            <option></option>
-            <option>Introverted & Passive</option>
-            <option>Extroverted & Passive</option>
-            <option>Introverted & Agressive</option>
-            <option>Extroverted & Agressive</option>
-          </select>
+        <div class="radio">
+          <input type="radio" name="area" value="Full-Stack">
+          Full-Stack
         </div>
       </div>
-      <button id ="mainButton" class="btn btn-success center2" type="submit">Press for Result!</button>
+
+
+      <div class="block">
+        <p><strong>Hours/day you are willing to spend on Programming: </strong></p>
+        <input id="hours" class="form-control wide250" type="number" min=0 max=24 required size="40">
+      </div>
+
+      <div class="block">
+        <p><strong>Years of Programming Experience: </strong></p>
+        <div class="radio">
+          <input type="radio" name="experience" value="zerToOne" checked>
+          0-1 Years
+        </div>
+        <div class="radio">
+          <input type="radio" name="experience" value="twoToFive">
+          2-5 Years
+        </div>
+        <div class="radio">
+          <input type="radio" name="experience" value="moreThanFive">
+          More than 5 Years
+        </div>
+      </div>
+
+      <div class="block">
+        <p><strong>Level of interest in Manipulating large chunks of data:</strong> (<strong>1</strong> represents
+          least interest while <strong>5</strong> represents most interest)</p>
+        <div class="radio">
+          <label><input type="radio" name="dataInterest" value="1" required>&nbsp;1&nbsp;</label>
+          <label><input type="radio" name="dataInterest" value="2" required>&nbsp;2&nbsp;</label>
+          <label><input type="radio" name="dataInterest" value="3" required>&nbsp;3&nbsp;</label>
+          <label><input type="radio" name="dataInterest" value="4" required>&nbsp;4&nbsp;</label>
+          <label><input type="radio" name="dataInterest" value="5" required>&nbsp;5&nbsp;</label>
+        </div>
+      </div>
+
+      <div class="block">
+        <p><strong>Personality Type: </strong></p>
+        <select class="form-control wide250" id="type" required>
+          <option>Introverted & Passive</option>
+          <option>Extroverted & Passive</option>
+          <option>Introverted & Agressive</option>
+          <option>Extroverted & Agressive</option>
+        </select>
+      </div>
+
+
+      <div class="block">
+        <p><strong>Would you call a Horse with a Sore Throat a "Hoarse?" </strong></p>
+        <div class="radio">
+          <input type="radio" name="soreThroat" value="Yes" checked>
+          Yes
+        </div>
+        <div class="radio">
+          <input type="radio" name="soreThroat" value="No">
+          No
+        </div>
+      </div>
+
+      <button id="mainButton" class="btn btn-success center2" type="submit">Press for Result!</button>
     </form>
     <div id="story" class="alert alert-dark" role="alert">
-      <p><span class="fullName"></span>&nbsp;, based on your selection, best <strong>Programming Language</strong> is <span
-          class="chosenTrack"></span> </p>
-      <p><br><br>You selected the following ... </p>
+      <p><span class="fullName color"></span>&nbsp;, based on your selection, best <strong>Programming Language</strong>
+        Track is <span class="chosenTrack color"></span> </p>
+      <p><br>You selected the following ... </p>
       <div class="row">
         <div class="col-6">
           <ul id="question"></ul>
@@ -100,7 +106,7 @@
       </div>
     </div>
 
-    <div style="margin-top: 100px">
+    <div class="aTag">
       <a href="./index.html" id="aTag">Go Back to Home page</a>
     </div>
 

@@ -1,25 +1,22 @@
 var fullName;
 
-let langSelector = function(area, hours, experience, dataInterest, type) {
-  let chosenLang;
-  if (hours < 10) {
-    chosenLang = "HTML/CSS/JS";
+let langSelector = function (area) {
+  let chosenTrack;
+  switch (area) {
+    case 'Front-End':
+      chosenTrack = "HTML/CSS/JavaScript";
+      break;
+    case 'Back-end':
+      chosenTrack = "C#/Ruby/Python";
+      break;
+    case 'Full-Stack':
+      chosenTrack = "HTML/CSS/JavaScript and C#/Ruby/Python";
+      break;
+    default:
+      chosenTrack = "HTML/CSS/JavaScript";
+      break;
   }
-  elseif (hours> 10 && hours < 40) {
-    if (dataInterest >3)
-    {
-      chosenLang = "C++";
-    }
-    elseif (dataInterest <=3)
-
-  }
-  elseif (hours> 40) {
-
-  }
-
-
-  return chosenLang;
-
+  return chosenTrack;
 }
 
 $(document).ready(function () {
@@ -39,25 +36,38 @@ $(document).ready(function () {
     const experience = $("input:radio[name=experience]:checked").val();
     const dataInterest = parseInt($("input:radio[name=dataInterest]:checked").val());
     const type = $("#type").val();
-    const passedfullName =  sessionStorage.getItem("passedName");
-    // const string = " you selected Area:Hours:Experience:DataInterest:Personality Type:::::" + area + " : " + hours + " : " + experience + " : " + dataInterest + " : " + type;
+    const soreThroat = $("input:radio[name=soreThroat]:checked").val();
     
-    // $(".result").toggle().text(string);
+    const passedfullName = sessionStorage.getItem("passedName");
     $(".fullName").text(passedfullName);
-    let chosenTrack = "C++";
+   
+    let chosenTrack = langSelector(area);
+
+    if(area === "Back-end" && hours < 5) {
+      chosenTrack = "HTML/CSS/JavaScript";
+    }
+    else if(area === "Full-Stack" && hours < 12) {
+        chosenTrack = "C#/Ruby/Python";
+    }
+    else if(area === "Full-Stack" && dataInterest < 3) {
+      chosenTrack = "C#/Ruby/Python";
+  }
+
     $(".chosenTrack").text(chosenTrack);
-    
+
     $("ul#question").append("<li>Area of Interest</li>");
     $("ul#question").append("<li>Hours/day you are willing to spend on Programming</li>");
     $("ul#question").append("<li>Years of Programming Experience</li>");
     $("ul#question").append("<li>Level of interest in Manipulating large chunks of data</li>");
     $("ul#question").append("<li>Personality Type</li>");
+    $("ul#question").append("<li>Would you call a Horse with a Sore Throat a \"Hoarse?\"</li>");
 
-    const fArea = "<li><strong>"+ area +"</strong></li>";
-    const fHours = "<li><strong>"+ hours +"</strong></li>";
-    const fExperience = "<li><strong>"+ experience +"</strong></li>";
-    const fDataInterest = "<li><strong>"+ dataInterest +"</strong></li>";
-    const fType = "<li><strong>" + type +"</strong></li>";
+    const fArea = "<li><strong>" + area + "</strong></li>";
+    const fHours = "<li><strong>" + hours + "</strong></li>";
+    const fExperience = "<li><strong>" + experience + "</strong></li>";
+    const fDataInterest = "<li><strong>" + dataInterest + "</strong></li>";
+    const fType = "<li><strong>" + type + "</strong></li>";
+    const fsoreThroat = "<li><strong>" + soreThroat + "</strong></li>";
 
     // $("ul#answer").remove(fArea);
     $("ul#answer").append(fArea);
@@ -65,6 +75,7 @@ $(document).ready(function () {
     $("ul#answer").append(fExperience);
     $("ul#answer").append(fDataInterest);
     $("ul#answer").append(fType);
+    $("ul#answer").append(fsoreThroat);
 
     $("#story").show();
     event.preventDefault();
