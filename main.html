@@ -14,40 +14,40 @@
 <body>
   <div class="container containerExtra">
     <h1>Programming Language Suggester</h1>
-    <p>Please answer following (<em><strong>1</strong></em> represents least important while <em><strong>5</strong></em>  represents most important):</p>
+    <h2>Please answer following:</h2>
     <form id=questionForm>
 
       <div class="form-group">
         <div class="block">
-          <p><strong>Which area are you interested in mastering?</strong></p>
+          <p><strong>Area of Interest: </strong></p>
           <div class="radio">
             <label>
-              <input type="radio" name="area" value="FE" checked>
+              <input type="radio" name="area" value="Front-End" checked>
               Front-End
             </label>
           </div>
           <div class="radio">
             <label>
-              <input type="radio" name="area" value="BE">
+              <input type="radio" name="area" value="Back-End">
               Back-End
             </label>
           </div>
           <div class="radio">
             <label>
-              <input type="radio" name="area" value="FS">
+              <input type="radio" name="area" value="Full-End">
               Full Stack
             </label>
           </div>
         </div>
 
         <div class="block">
-          <p><strong>How many hours/day would you be able to learning a Programming language?</strong></p>
-          <input id="hours" class="form-control" type="number" min=0 required>
+          <p><strong>Hours/day you are willing to spend on Programming: </strong></p>
+          <input id="hours" class="form-control wide250" type="number" min=0 required size="40">
         </div>
 
         <div class="block">
           <div class="radio">
-            <p><strong>How many years of Programming experience do you have?</strong></p>
+            <p><strong>Years of Programming Experience: </strong></p>
             <input type="radio" name="experience" value="zeroOne" checked>
             0-1 Years
             <div class="radio">
@@ -63,7 +63,8 @@
 
         <div class="block">
           <div class="radio">
-            <p><strong>Manipulating large chuncks of user data?</strong></p>
+            <p><strong>Level of interest in Manipulating large chunks of data:</strong> (<strong>1</strong> represents
+              least interest while <strong>5</strong> represents most interest)</p>
             <label><input type="radio" name="dataInterest" value="1" required>&nbsp;1&nbsp;</label>
             <label><input type="radio" name="dataInterest" value="2" required>&nbsp;2&nbsp;</label>
             <label><input type="radio" name="dataInterest" value="3" required>&nbsp;3&nbsp;</label>
@@ -73,8 +74,9 @@
         </div>
 
         <div class="block">
-          <p><strong>Which of these four personality types do you think best describes your self?</strong></p>
-          <select class="form-control" id="type" required>
+          <p><strong>Personality Type: </strong></p>
+          <select class="form-control wide250" id="type" required>
+            <option></option>
             <option>Introverted & Passive</option>
             <option>Extroverted & Passive</option>
             <option>Introverted & Agressive</option>
@@ -82,17 +84,27 @@
           </select>
         </div>
       </div>
-      <button class="btn btn-success" type="submit" >Press for Result!</button>
+      <button id ="mainButton" class="btn btn-success center2" type="submit">Press for Result!</button>
     </form>
-<div class="result">
-    <p>You selected <span class="person1"></span> and <span class="person2"></span> were walking through the woods</p>
-  </div>
+    <div id="story" class="alert alert-dark" role="alert">
+      <p><span class="fullName"></span>&nbsp;, based on your selection, best <strong>Programming Language</strong> is <span
+          class="chosenTrack"></span> </p>
+      <p><br><br>You selected the following ... </p>
+      <div class="row">
+        <div class="col-6">
+          <ul id="question"></ul>
+        </div>
+        <div class="col-4">
+          <ul id="answer"></ul>
+        </div>
+      </div>
+    </div>
 
-  <div style="margin-top: 100px">
-    <a href="./index.html">Go Back to Home page</a>
-  </div>
+    <div style="margin-top: 100px">
+      <a href="./index.html" id="aTag">Go Back to Home page</a>
+    </div>
 
-</div>
+  </div>
 </body>
 
 </html>

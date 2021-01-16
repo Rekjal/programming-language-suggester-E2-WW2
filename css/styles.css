@@ -1,15 +1,16 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: rgb(128, 129, 129);
+  background-color: rgb(55, 82, 133);
 }
 
 .container {
-  width: 65%;
+  width: 75%;
 }
 
 .containerExtra {
-  background-color: rgb(223, 224, 224);
+  background-color: rgb(229, 229, 233);
   padding: 2px 10px 5px 10px;
+  margin-top: 20px;
 }
 
 h1, h2 {
@@ -25,11 +26,57 @@ h1, h2 {
   margin:auto;
 }
 
+.center2 {
+  width: 70%;
+  margin:auto;
+  background-color: blue;;
+}
+
 .hidden {
   display:none;
 }
 
 .result{
+  display: none;
+  width: 70%;
+  margin: auto;
+}
+
+.wide250 {
+  width: 250px;
+}
+
+
+
+#story {
+  display: none;
+}
+.a {
+  cursor: pointer;
+  color: #0088cc;
+}
+.a:hover {
+  text-decoration: underline;
+}
+
+#aTag {
+  /* float:right;
+  display: inline; */
+}
+
+.chosenTrack{
+  font-weight: 700;
+}
+
+.fullName {
+  text-transform: uppercase;
+}
+
+.li {
+  list-style-type: square;
+}
+
+.hideButton {
   display: none;
 }
 
