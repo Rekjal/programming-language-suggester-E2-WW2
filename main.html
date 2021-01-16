@@ -15,8 +15,8 @@
   <div class="container containerExtra">
     <h1>Programming Language Suggester</h1>
     <h3>... continued <strong>Quick Questionnaire.</strong> Please answer following:</h3>
-    <form id=questionForm>
 
+    <form id=questionForm>
       <div class="block">
         <p><strong>Area of Interest: </strong></p>
         <div class="radio">
@@ -33,10 +33,9 @@
         </div>
       </div>
 
-
       <div class="block">
         <p><strong>Hours/day you are willing to spend on Programming: </strong></p>
-        <input id="hours" class="form-control wide250" type="number" min=0 max=24 required size="40">
+        <input id="hours" class="form-control wide250" type="number" min=0 max=24 required>
       </div>
 
       <div class="block">
@@ -69,7 +68,7 @@
 
       <div class="block">
         <p><strong>Personality Type: </strong></p>
-        <select class="form-control wide250" id="type" required>
+        <select class="form-control wide250" id="type">
           <option>Introverted & Passive</option>
           <option>Extroverted & Passive</option>
           <option>Introverted & Agressive</option>
@@ -93,7 +92,9 @@
       <div class="center2">
         <button id="mainButton" class="btn btn-success" type="submit">Press for Result!</button>
       </div>
+
     </form>
+
     <div id="story" class="alert alert-dark" role="alert">
       <p><span class="fullName color"></span>&nbsp;, based on your selection, best <strong>Programming Language</strong>
         Track is <span class="chosenTrack color"></span> </p>
