@@ -15,7 +15,7 @@ This is an application for people interested in coding to decide which languages
 ## Setup/Installation Requirements
 1. Clone this repository.
 2. To run program open **_index.html_** from browser
-3. Page is also hosted on [Github](https://rekjal.github.io/portfolio-landing-page-E2-WW1)
+3. Page is also hosted on [Github](https://rekjal.github.io/programming-language-suggester-E2-WW2)
 
 ## Known Bugs
 
