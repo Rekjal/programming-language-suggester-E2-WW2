@@ -50,7 +50,7 @@ $(document).ready(function () {
       chosenTrack = "C#/Ruby/Python";
     }
     else {
-      // continue;
+      chosenTrack;
     }
 
     $(".chosenTrack").text(chosenTrack);
