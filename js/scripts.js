@@ -49,6 +49,9 @@ $(document).ready(function () {
     else if (area === "Full-Stack" && dataInterest < 3) {
       chosenTrack = "C#/Ruby/Python";
     }
+    else {
+      // continue;
+    }
 
     $(".chosenTrack").text(chosenTrack);
     $("ul#question").append("<li>Area of Interest</li>");
